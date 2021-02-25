@@ -1,31 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/status"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/hospital"
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="병원정보"
-        android:onClick="mOnClick"/>
+        android:src="@drawable/ic_android_black_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.401" />
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="Loading"
+        android:textColor="#000000"
+        android:textSize="46sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-        <TextView
-            android:id="@+id/result"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:textSize="8sp"
-            android:textStyle="bold"/>
-    </ScrollView>
-
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
